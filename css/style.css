@@ -490,7 +490,7 @@ main {
 }
 
 .item-letter{
-    top: -35px;
+    top: -55px;
     left: 130px;
 }
 .item-camera {
@@ -506,7 +506,7 @@ main {
     left: 500px;
 }
 .item-menu {
-    top: 275px;
+    top: 295px;
     left: 190px;
 }
 
@@ -522,10 +522,11 @@ main {
 }
 
 /*images size*/
-.item-letter img,
+
 .item-menu img {
-    max-height: 8rem;
+    max-height: 10rem;
 }
+.item-letter img,
 .item-album img,
 .item-camera img,
 .item-ipod img,
