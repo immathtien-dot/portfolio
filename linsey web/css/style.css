@@ -1,0 +1,660 @@
+/* ~~~~~ color palete ~~~~~ */
+
+:root {
+    --bg-color-1: #000000;
+    --bg-color-2: #e9ebe8;
+    --font: #111;
+    --accent-1: #b7fa70;
+    --accent-2: #d3acfa;
+    --dark: #222;
+}
+
+
+/*background color 1: #fff, 
+background color 2: #e9ebe8
+font: #111
+accent 1: #e5fa00
+accent 2: #00da80
+dark: #333
+*/
+
+
+/* ~~~~~ CSS resets ~~~~~ */
+*,
+*::before,
+*::after {
+        box-sizing: border-box;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*repeat user font size preferences*/
+html {
+    font-size: 100%;
+}
+/*make images responsive*/
+img {
+display: block;
+max-width: 100%;
+}
+
+
+/* ~~~~~General CSS ~~~~~ */
+
+html{
+    scroll-behavior: smooth;
+}
+    
+body {
+    background-size: 1920px 1080px;    
+    background-position: center;
+    background-repeat: repeat;
+    font-size: 1.2rem;
+    background-color: var(--bg-color-1);
+    color: var(--bg-color-2);
+    font-family:  "Archivo", sans-serif;      
+    line-height: 1.5;
+    /*text-align: justify;*/
+}
+ /*camera project*/
+.camera-project {
+    background-color: #0b0b0b;
+    color: #e9ebe8;
+}
+
+.camera-project nav a {
+    color: #e9ebe8;
+}
+
+/* project gallery */
+.work-grid-body {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.work-grid-body nav a {
+    color: #111111;
+}
+
+.work-grid-page {
+    padding: 2rem 5vw 4rem;
+}
+
+.work-grid-title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    color: #111111;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.work-card {
+    background: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+}
+
+.work-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.work-card-meta {
+    padding: 1rem 1rem 1.25rem;
+}
+
+.work-card-meta h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.work-card-meta p {
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+@media (max-width: 1000px) {
+    .work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Format page*/
+.format-page {
+    background-color: #0b0b0b;
+    color: #ffffff;
+}
+
+.format-page nav a {
+    color: #ffffff;
+}
+
+.format-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center top;
+    justify-content: center;
+    padding: 5rem 5vw 2rem;
+}
+
+.format-project {
+    max-width: 40rem;
+}
+
+.format-title {
+    font-family: "Archivo", sans-serif;    
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+}
+
+.format-body {
+    font-family: "Archivo", sans-serif;    
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin: 0 0 1rem 0;
+    max-width: 32rem;
+}
+
+.format-media {
+    display: grid;
+    gap: 1.25rem;
+    justify-items: end;
+}
+
+.format-media video {
+    display: block;
+}
+
+.format-img {
+    width: min(420px, 100%);
+    height: auto;
+    border-radius: 1.25rem;
+    display: block;
+}
+
+.format-img--bottom {
+    width: min(520px, 100%);
+}
+
+@media (max-width: 400px) {
+    .format-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        min-height: auto;
+    }
+
+    .format-media {
+        justify-items: start;
+    }
+}
+/* Camera detail */
+.project-detail {
+    padding: 2rem 5vw 4rem;
+}
+
+.project-header {
+    margin: 0 0 1.25rem 0;
+}
+
+.camera-project .flex-container-grid a {
+    flex: 0 1 300px;
+}
+
+.camera-project .flex-container-grid img.project-image {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.project-hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+.project-meta {
+    max-width: 22rem;
+}
+
+.project-thumb {
+    width: 100%;
+    max-width: 18rem;
+    border-radius: 1rem;
+    margin-bottom: 1.25rem;
+    display: block;
+}
+
+.project-title {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 0 0 0.5rem 0;
+}
+
+.project-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin: 0;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1.25rem;
+    display: block;
+}
+
+.project-image--hero {
+    border-radius: 1.5rem;
+}
+
+
+
+.project-image--wide {
+    grid-column: 1 / -1;
+}
+
+.project-caption {
+    max-width: 16rem;
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin: 0;
+    justify-self: end;
+}
+
+@media (max-width: 900px) {
+    .project-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-caption {
+        justify-self: start;
+    }
+}
+
+.home-page {
+    background-image: url("../public/images/background.png");
+    background-size: 1920px 1080px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+/* bookshelf */
+.projects-body {
+    position: relative;
+    background-image: url("../public/images/project-bg.png");
+    background-size: 80% auto;
+    background-position: center 5rem;
+    background-repeat: no-repeat;
+}
+
+.projects-body::before {
+    /* dimmer global background behind shelves */
+    content: "";
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-image: url("../public/images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    z-index: -1;
+    pointer-events: none;
+}
+
+header {
+    padding: 2rem 2.5rem;
+    margin-bottom: 0;
+}
+
+header h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 700;
+    text-shadow: none;
+}
+
+nav a {
+    color: var(--bg-color-2);
+    text-decoration: none;
+    /*margin: 0 1rem;
+    transition: all .5s ease;*/
+}
+
+nav a:hover {
+    color: var(--accent-2); 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hamburger {
+    display: none;
+    background: none;
+    font-size: 3rem;
+    border: none;
+    color: var(--accent-2);
+}
+
+.nav-menu {
+list-style: none;
+display: flex;
+gap: 1rem;
+}
+
+@media (max-width: 750px) {
+    .navbar {
+        align-items: flex-start;
+    }
+    .nav {
+        display: flex;
+        align-self: flex-end; 
+}
+    .hamburger {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+    }
+}
+
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--font);
+    padding: 1rem;
+}
+
+.nav-menu a {
+    color: var(--bg-color-2);
+}
+
+header {
+        padding: 1.5rem 2rem;
+}
+
+
+main {
+    font-size: 2rem;
+    font-weight: 1000;
+    margin: 0;
+    font-weight: bold;    
+}
+
+.home-page main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh);
+}
+
+.main-title {
+    font-size: clamp(3rem, 12vw, 7rem);
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #f4a9c9;
+}
+
+@media (max-width: 1030px) {
+    main {
+    margin: 2rem;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        margin: 1rem;
+    }
+}
+
+
+/* About page */
+.about-page {
+    background-color: #000000;
+    color: #e9ebe8;
+}
+
+.about-page nav a {
+    color: #e9ebe8;
+}
+
+.about-content,
+.portfolio-content,
+.contact-content {
+    max-width: 60rem;
+    margin: 0 auto 7rem auto;
+}
+
+.about-content h2,
+.portfolio-content h2,
+.contact-content h2 {
+    margin: 2rem 0;
+}
+
+/* Projects page */
+.projects-page {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+    padding: 3rem 5vw 4rem;
+    color: #111111;
+    position: relative;
+}
+
+.projects-shelves {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 2.5rem;
+}
+
+.project-item {
+    position: absolute;
+}
+
+.item-letter{
+    top: -35px;
+    left: 130px;
+}
+.item-camera {
+    top: -55px;
+    left: 500px;
+}
+.item-ipod{
+    top: 80px;
+    left: 330px;
+}
+.item-album{
+    top: 250px;
+    left: 500px;
+}
+.item-menu {
+    top: 275px;
+    left: 190px;
+}
+
+.item-tv {
+    top: 395px;
+    left: 340px;
+}
+
+.project-item img {
+    max-height: 10rem;
+    width: auto;
+    display: block;
+}
+
+/*images size*/
+.item-letter img,
+.item-menu img {
+    max-height: 8rem;
+}
+.item-album img,
+.item-camera img,
+.item-ipod img,
+.item-tv img {
+    max-height: 12rem;
+}
+
+
+.projects-title {
+    color: var(--bg-color-2);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    font-size: 0.95rem;
+    justify-content: space-between;
+}
+
+.projects-heading h2 {
+    color: var(--bg-color-2);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.projects-heading span {
+    color: var(--bg-color-1);
+    font-style: italic;
+    position: relative;
+}
+
+.projects-heading span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.1em;
+    height: 0.7em;
+    background-color: #ffe96e;
+    z-index: -1;
+}
+
+.projects-note {
+    margin-top: 1rem;
+    background-color: #e48cab;
+    margin: 3 5rem;
+    border-radius: 2.5rem;
+    padding: 2rem 2.5rem;
+    max-width: 22rem;
+}
+
+.projects-note p {
+    color: var(--bg-color-1);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+    .projects-page {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-copy {
+        padding-top: 0;
+    }
+}
+
+.portfolio-item {
+padding: 1rem;
+background-color: var(--font0);
+color: var(--bg-color-1);
+}
+
+.portfolio p {
+    font-size: 1rem;
+
+}
+
+.portfolio-item h3 {
+    font-size: 1.3rem;
+}
+
+.portfolio-item img {
+    border-radius: 1rem;
+}
+
+
+footer {
+    padding: 1rem 2rem;
+}
+
+footer img {
+    display: inline;
+    max-width: 3rem;
+    margin: 0 .5rem;
+}
+
+@media (max-width: 750px) {
+    footer p {
+        font-size: 1.2rem;
+
+    }
+    footer img {
+        max-width: 1.5rem;
+        margin: 0.1rem;
+    }
+}
+
+@media (max-width: 450px){
+    fotter p {
+        font-size: 1rem;
+    }
+}
+/*~~~~~~~~~~~~~~~~~~flex styling~~~~~~~~~~~~~~~~~*/
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.flex-item-grid {
+    flex: 1 0 18rem;
+
+}
